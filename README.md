@@ -20,7 +20,7 @@ logging.getLogger(__name__).addHandler(NullHandler())
 print(__name__)
 ```
 
-In the python_world.py
+In the `world.py`
 
 ```
 import logging
@@ -37,6 +37,9 @@ logging.critical('Critical mon minipougne)
 
 The logger is called python_world (`__name__`) so I thought something like that would work:
 ```
+
+import python_world
+
 import logging
 import sys
 
@@ -47,6 +50,9 @@ formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(funcNa
 file_handler = logging.StreamHandler(sys.stdout)
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
+
+python_world.world.world()
+
 ```
 
 
