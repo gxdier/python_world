@@ -15,6 +15,22 @@ In the __ini__.py of the project
 # Set default logging handler to avoid "No handler found" warnings.
 import logging
 from logging import NullHandler
+
+logging.getLogger(__name__).addHandler(NullHandler())
+```
+
+In the python_world.py
+
+```
+
+import logging
+
+logging.debug('Debug mon minipougne)
+logging.info('Info mon minipougne')
+logging.warning('Warning mon minipougne)
+logging.error('Error mon minipougne)
+logging.critical('Critical mon minipougne)
+
 ```
 
 
