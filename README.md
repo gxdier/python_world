@@ -9,7 +9,7 @@ This repository defines a very simple package that just has a function that retu
 
 ## Modification Logger
 
-In the __ini__.py of the project
+In the `__ini__.py` of the project
 
 ```
 # Set default logging handler to avoid "No handler found" warnings.
