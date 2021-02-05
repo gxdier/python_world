@@ -1,11 +1,11 @@
 import logging
 
+
 def world():
-	
-	logging.debug('Debug mon minipougne')
-	logging.info('Info mon minipougne')
-	logging.warning('Warning mon minipougne')
-	logging.error('Error mon minipougne')
-	logging.critical('Critical mon minipougne')
-	
-	return "world"
+    logger = logging.getLogger(__name__)
+    logger.debug('Debug mon minipougne')
+    logger.info('Info mon minipougne')
+    logger.warning('Warning mon minipougne')
+    logger.error('Error mon minipougne')
+    logger.critical('Critical mon minipougne')
+    return "world"
