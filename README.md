@@ -49,3 +49,27 @@ python_world.world.world()
 ```
 
 
+## Logging: how to ?
+in your package:
+```python
+import logging
+logger = logging.getLogger(__name__)  # creates a logger named __name__ (let's call it "package_name")
+# then set a null handler on logger
+# log what you want using this logger: logger.info("toto")
+```
+
+Then, in your application:
+get your package's logger :
+```python
+import logging
+logger_package = logging.getLogger("package_name")
+# set the desired handler on logger_package
+# your package will now log stuff using your handler 
+```
+
+Howerver, if you do in your package 
+```python
+import logging
+logging.info("toto")
+```
+then "toto" will be logged by the `root` logger, even if you call it from your application.
