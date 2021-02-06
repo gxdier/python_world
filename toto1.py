@@ -8,7 +8,7 @@ logger = logging.getLogger('python_world')
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s")
 file_handler = logging.StreamHandler(sys.stdout)
-file_handler = setFormatter(formatter)
+file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
 # Si je fais ca alors le niveau est bien set a INFO et ca me print bien les log bien formatte dans la stdout MAIS
@@ -19,4 +19,4 @@ logger.addHandler(file_handler)
 
 world.world()
 
-world1.world()
+#world1.world()
